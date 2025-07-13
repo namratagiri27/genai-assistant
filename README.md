@@ -7,6 +7,7 @@ This app lets users upload documents (PDF/TXT) and:
 - Get evaluated with feedback
 
 ## ⚙️ Tech Stack
+Python, FastAPI, Transformers, Streamlit, Git, Machine Learning (Hugging Face Models)
 - **Backend**: FastAPI, Transformers
 - **Frontend**: Streamlit
 - **NLP Models**: `distilbert-base-uncased-distilled-squad`
