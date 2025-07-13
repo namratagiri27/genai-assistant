@@ -26,6 +26,7 @@ class ChallengeResponse(BaseModel):
 
 @app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
+     print(f"📂 Received file: {file.filename}")  
     ext = file.filename.split('.')[-1].lower()
     content = await file.read()
     if ext == 'pdf':
