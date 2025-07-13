@@ -30,6 +30,13 @@ cd frontend
 streamlit run app.py
 ```
 
+## 🧪 Postman API Collection
+
+Postman tests for all API endpoints are included in the repo under the `/postman` folder.
+
+[Download Collection](postman/GenAI%20Assistant%20API.postman_collection.json)
+
+
 ## 🏁 Features
 
 - ✅ Upload PDF/TXT
