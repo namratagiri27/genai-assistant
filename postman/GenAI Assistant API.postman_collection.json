@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "eb159e89-7f04-4924-8c04-b087f7007e98",
+		"name": "GenAI Assistant API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35972423"
+	},
+	"item": [
+		{
+			"name": "Upload Document",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/upload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ask Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question\": \"What is AI?\",\n    \"document_id\": \"your-doc-id\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ask",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Challenge Me",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/challenge?document_id=your-doc-id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"challenge"
+					],
+					"query": [
+						{
+							"key": "document_id",
+							"value": "your-doc-id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evaluate Answers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"document_id\": \"your-doc-id\",\n    \"answers\": [\"answer 1\", \"answer 2\", \"answer 3\"]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/evaluate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"evaluate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
